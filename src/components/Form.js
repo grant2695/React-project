@@ -42,8 +42,8 @@ const Form = ({
         <div className="text-white p-2 hover:bg-blue-400">Tasks</div>
       </div>
 
-      <div className={"flex justify-center mt-20"}>
-        <div className={"border w-1/2"}>
+      <div className={"flex justify-center mt-20 "}>
+        <div className={"border w-3/4"}>
           <div className={"flex gap-3 justify-center p-4"}>
             <form>
               <input
