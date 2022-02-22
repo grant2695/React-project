@@ -3,10 +3,14 @@ import React from "react";
 
 
   function About(){
+    return (
       <>
-      <div>
-          <h1>this is here</h1>
-      </div>
+        <div>
+          <div className="flex justify-center align-center mt-10 border rounded-xl  ">
+            <h1 className=" mt-20 text-4xl font-mono">About</h1>
+          </div>
+        </div>
       </>
+    );  
   }
 export default About;

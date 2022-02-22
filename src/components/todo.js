@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ({ text, todos, setTodos, todo,filteredTodos }) => {
+const Todo = ({ text, todos, setTodos, todo, filteredTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
@@ -20,11 +20,12 @@ const Todo = ({ text, todos, setTodos, todo,filteredTodos }) => {
 
   return (
     <div>
-      <div className={"flex justify-between px-4 mt-1 bg-gray-100"}>
+      <div className={"flex justify-between px-4 mt-1  "}>
         <div>
           <span
-            className={`ml-2 text-sm font-semibold      
-            ${todo.completed ? "completed" : " "}`}>
+            className={`ml-2 text-sm font-semibold    
+            ${todo.completed ? "completed" : " "}`}
+          >
             {text}
           </span>
         </div>
@@ -33,7 +34,7 @@ const Todo = ({ text, todos, setTodos, todo,filteredTodos }) => {
             <i className="fa-solid fa-circle-check text-blue-500 p-1"></i>
           </button>
           <button onClick={deleteHandler}>
-            <i className="fa-solid fa-trash text-sm text-red-500 p-1"></i>
+            <i className="fa-solid fa-trash text-sm text-[#ff3b3f] p-1"></i>
           </button>
         </div>
       </div>

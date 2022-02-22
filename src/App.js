@@ -54,15 +54,15 @@ function App() {
   return (
     <BrowserRouter basename="/React-project">
       <div className="App">
-        <div className=" w-screen flex justify-start bg-sky-800 p-3">
-          <div className="text-white p-2 hover:bg-cyan-700 rounded ">
+        <div className=" w-screen flex justify-start bg-[#a9a9a9] p-2">
+          <div className="text-white p-2 hover:bg-gray-700 text-white rounded ">
             <Link to="/React-project/About">About</Link>
           </div>
-          <div className="text-white p-2 hover:bg-cyan-700 rounded ">
+          <div className="text-white p-2 hover:bg-gray-700 rounded ">
             <Link to="/React-project/Contact">Contact</Link>
           </div>
-          <div className="text-white p-2 hover:bg-cyan-700 rounded ">
-            <Link to="/React-project/Form">Todos</Link>
+          <div className="text-white p-2 hover:bg-gray-700 rounded  ">
+            <Link to="/React-project/Form">To-do</Link>
           </div>
         </div>
 
@@ -81,6 +81,7 @@ function App() {
             }
           />
           <Route path="/React-project/Contact" element={<Contact />} />
+          <Route path="/React-project/About" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>

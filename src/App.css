@@ -1,5 +1,6 @@
 .completed{
-  text-decoration: line-through;
+  text-decoration: line-through ;
+  color: #ff3b3f;
   opacity: 0.5;
 }
 

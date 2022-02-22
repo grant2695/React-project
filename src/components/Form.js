@@ -40,10 +40,15 @@ const Form = ({
   
   return (
     <>
-      <div className={"flex justify-center mt-10  "}>
-        <div className={"border w-3/4 rounded-lg"}>
+      <div className="flex justify-center mt-10">
+        <p className=" text-[#a9a9a9] text-bold text-center text-5xl font-mono  shadow-indigo-500/40 p-5 rounded-3xl  ">
+          My To-do List
+        </p>
+      </div>
+      <div className={"flex justify-center mt-10 flex-grow-1 "}>
+        <div className={"border w-3/4 "}>
           <div
-            className={"flex gap-2 justify-center p-4 bg-blue-400 rounded-lg"}
+            className={"flex gap-2 justify-center p-4 bg-[#caebf2] "}
           >
             <form className="text-center">
               <input
@@ -57,16 +62,12 @@ const Form = ({
               />
               <button
                 onClick={submitTodoHandler}
-                className={"rounded  pr-5"}
+                className={"rounded  "}
                 type={"submit"}
               >
                 <i class="fas fa-plus-square"></i>
               </button>
-            </form>
-          </div>
-          <form>
-            <div className="d-flex">
-              <div className="select text-center p-2">
+              <div className="select  p-2">
                 <select
                   onChange={statusHandler}
                   name="todos"
@@ -77,11 +78,16 @@ const Form = ({
                   <option value="uncompleted">Uncompleted</option>
                 </select>
               </div>
-            </div>
+            </form>
+          </div>
+          <form>
+            <div className="d-flex justify-center"></div>
           </form>
-          <div className={"flex justify-between px-4 bg-blue-100 p-2 border-b"}>
+          <div
+            className={"flex justify-between px-4 bg-[#caebf2] p-2 border-b"}
+          >
             <div>
-              <span className={"ml-2 text-sm font-bold"}>Todo</span>
+              <span className={"ml-2 text-sm font-bold"}>To-do</span>
             </div>
             <div>
               <ul className="ml-3">
