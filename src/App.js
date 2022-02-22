@@ -52,23 +52,23 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/React-project">
       <div className="App">
         <div className=" w-screen flex justify-start bg-sky-800 p-3">
           <div className="text-white p-2 hover:bg-cyan-700 rounded ">
-            <Link to="/About">About</Link>
+            <Link to="/React-project/About">About</Link>
           </div>
           <div className="text-white p-2 hover:bg-cyan-700 rounded ">
-            <Link to="/Contact">Contact</Link>
+            <Link to="/React-project/Contact">Contact</Link>
           </div>
           <div className="text-white p-2 hover:bg-cyan-700 rounded ">
-            <Link to="/Form">Todos</Link>
+            <Link to="/React-project/Form">Todos</Link>
           </div>
         </div>
 
         <Routes>
           <Route
-            path="/Form"
+            path="/React-project/Form"
             element={
               <Form
                 inputText={inputText}
@@ -80,14 +80,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/Contact"
-            element={
-              <Contact
-               
-              />
-            }
-          />
+          <Route path="/React-project/Contact" element={<Contact />} />
         </Routes>
       </div>
     </BrowserRouter>
