@@ -1,5 +1,6 @@
 
 import React, {useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import Todo from "./todo";
 
@@ -18,17 +19,20 @@ const Form = ({
   const inputTextHandler = (e) => {
     //console.log(e.target.value);
     setInputText(e.target.value);
+   
+    
   };
    const submitTodoHandler = (e) => {
-       
+       e.preventDefault();
      setTodos([
        ...todos,
        { text: inputText, completed: false, id: Math.random() * 1000 },
        
      ]);
-     setInputText.reset();
-     e.preventDefault();
+    setInputText(' ')     
+     
    };
+   
   const statusHandler = (e) => {
     setStatus(e.target.value);
   };
@@ -36,25 +40,24 @@ const Form = ({
   
   return (
     <>
-      <div className=" w-screen flex justify-start bg-black p-4">
-        <div className="text-white p-2 hover:bg-blue-400">About</div>
-        <div className="text-white p-2 hover:bg-blue-400">Contact</div>
-        <div className="text-white p-2 hover:bg-blue-400">Tasks</div>
-      </div>
-
-      <div className={"flex justify-center mt-20 "}>
-        <div className={"border w-3/4"}>
-          <div className={"flex gap-3 justify-center p-4"}>
-            <form>
+      <div className={"flex justify-center mt-10  "}>
+        <div className={"border w-3/4 rounded-lg"}>
+          <div
+            className={"flex gap-2 justify-center p-4 bg-blue-400 rounded-lg"}
+          >
+            <form className="text-center">
               <input
+                placeholder={"Task..."}
+                value={inputText}
                 onChange={inputTextHandler}
                 type={"text"}
-                className={"border w-2/3 px-1 outline-none rounded"}
-                placeholder={"Task..."}
+                className={
+                  " w-full   pr-20 rounded-xl z-0 focus:shadow focus:outline-none"
+                }
               />
               <button
                 onClick={submitTodoHandler}
-                className={" border p-1  w-1/4  rounded"}
+                className={"rounded  pr-5"}
                 type={"submit"}
               >
                 <i class="fas fa-plus-square"></i>
@@ -99,6 +102,9 @@ const Form = ({
       </div>
     </>
   );
+  
+    
+  
 };
 
 export default Form;
