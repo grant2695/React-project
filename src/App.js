@@ -7,7 +7,8 @@ import Todo from './components/todo';
 import About from './components/About';
 import Contact from './components/Contact';
 
-import { BrowserRouter, Routes, Route, Link,NavLink } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, Link,Redirect} from "react-router-dom";
 
 
 
@@ -55,6 +56,9 @@ function App() {
     <BrowserRouter basename="/React-project">
       <div className="App">
         <div className=" w-screen flex justify-start bg-[#a9a9a9] p-2">
+          <a href="#" class="navbar-brand font-['Lobster']">
+            <Link to="/React-project/About"> Tasking</Link>
+          </a>
           <div className="text-white p-2 hover:bg-gray-700 text-white rounded ">
             <Link to="/React-project/About">About</Link>
           </div>
@@ -68,7 +72,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/React-project/Form"
+            path="/"
             element={
               <Form
                 inputText={inputText}

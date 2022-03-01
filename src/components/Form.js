@@ -41,15 +41,13 @@ const Form = ({
   return (
     <>
       <div className="flex justify-center mt-10">
-        <p className=" text-[#a9a9a9] text-bold text-center text-5xl font-mono  shadow-indigo-500/40 p-5 rounded-3xl  ">
+        <p className=" text-[#a9a9a9] text-bold text-center text-5xl font-mono   p-5 rounded-3xl font-['Lobster']  ">
           My To-do List
         </p>
       </div>
       <div className={"flex justify-center mt-10 flex-grow-1 "}>
         <div className={"border w-3/4 "}>
-          <div
-            className={"flex gap-2 justify-center p-4 bg-[#caebf2] "}
-          >
+          <div className={"flex gap-2 justify-center p-4 bg-[#caebf2] "}>
             <form className="text-center">
               <input
                 placeholder={"Task..."}
@@ -91,7 +89,7 @@ const Form = ({
             </div>
             <div>
               <ul className="ml-3">
-                <li>done/delete</li>
+                <li>Completed/delete</li>
               </ul>
             </div>
           </div>
