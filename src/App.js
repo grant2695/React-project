@@ -66,7 +66,7 @@ function App() {
             <Link to="/React-project/Contact">Contact</Link>
           </div>
           <div className="text-white p-2 hover:bg-gray-700 rounded  ">
-            <Link to="/React-project/Form">To-do</Link>
+            <Link to="/">To-do</Link>
           </div>
         </div>
 
