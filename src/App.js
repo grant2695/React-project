@@ -39,9 +39,11 @@ function App() {
         break;
     }
   };
+  //saves todos to cache
   const saveLocalTodos = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
+  //checks cache if user added todo items to list and displays if there are saved items in list
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
